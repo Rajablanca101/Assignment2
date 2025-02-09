@@ -1,0 +1,32 @@
+<!-- ttt2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Tic Tac Toe</h1>
+    <div class="status">X's Turn</div>
+    <div class="board" id="board"></div>
+    <div class="win-message">Win Condition</div>
+
+    <script>
+        const NUM_SQUARES = 9;
+        const board = document.getElementById("board");
+        
+        for (let i = 0; i < NUM_SQUARES; i++) {
+            const square = document.createElement("div");
+            square.className = "square";
+            square.id = "sq" + i;
+            board.appendChild(square);
+        }
+        
+        document.getElementById("sq0").textContent = "X";
+        document.getElementById("sq4").textContent = "O";
+        document.getElementById("sq6").textContent = "X";
+    </script>
+</body>
+</html>
